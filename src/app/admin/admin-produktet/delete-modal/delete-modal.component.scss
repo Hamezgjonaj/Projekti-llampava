@@ -1,0 +1,62 @@
+.transparent-modal-background {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100000000;
+}
+.contracting-party-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0px 0px 20px rgba(132, 132, 132, 0.2);
+    border-radius: 16px;
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    position: fixed;
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+.contracting-party-modal-header{
+    display:flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+.contracting-party-modal-header-text{
+    line-height: 150%;
+    color: black;
+    font-size: 24px;
+    font-weight: 800;
+}
+.contracting-party-modal-header-icon{
+    width: 24px;
+    height: 24px;
+    color: black;
+}
+.contracting-party-modal-body{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+.button-style{
+    line-height: 150%;
+    color: black;
+    font-size: 24px;
+    font-weight: 800;
+    border-radius: 16px;
+    padding: 10px;
+}
+.button-style.yes{
+    background-color: greenyellow;
+}
+.button-style.no{
+    background-color: lightsalmon;
+}

@@ -1,0 +1,80 @@
+<div class="col-md-6 offset-md-3">
+  <h1 class="text-center">Shto nje Punetor!</h1>
+  <div class="container mt-5 px-2">
+    <div class="mb-4 d-flex justify-content-between align-items-center">
+      <div class="position-relative">
+        <form [formGroup]="form">
+          <div class="mb-3">
+            <h3>Id</h3>
+            <input
+              type="text"
+              class="form-control"
+              id="Barcode"
+              formControlName="Id"
+              placeholder="Id"
+              minlength="2"
+            />
+          </div>
+          <div class="mb-3">
+            <h3>Emri</h3>
+            <input
+              type="text"
+              class="form-control"
+              id="Emri"
+              formControlName="Emri"
+              placeholder="Emri"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <h3>Username</h3>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              formControlName="username"
+              placeholder="username"
+            />
+          </div>
+
+          <div class="mb-3">
+            <h3>Password</h3>
+            <input
+              type="text"
+              class="form-control"
+              id="password"
+              formControlName="password"
+              placeholder="password"
+              minlength="1"
+            />
+          </div>
+          <div *ngIf="!form.valid" class="error">
+            <p>Ju lutem plotesoni fushat e kerkuara!</p>
+          </div>
+          <hr />
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="goToAdd()"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+          >
+            Shto Punetor
+          </button>
+          <hr />
+          <button
+            type="button"
+            href="#"
+            (click)="kthehu()"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+          >
+            Kthehu
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

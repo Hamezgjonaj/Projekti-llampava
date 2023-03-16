@@ -1,0 +1,94 @@
+<div class="col-md-6 offset-md-3">
+  <h1 class="text-center" *ngIf="!llojiINdryshimit">Shto nje Produkt!</h1>
+  <h1 class="text-center" *ngIf="llojiINdryshimit">Edito nje Produkt!</h1>
+  <div class="container mt-5 px-2">
+    <div class="mb-4 d-flex justify-content-between align-items-center">
+      <div class="position-relative">
+        <form [formGroup]="form">
+          <div class="mb-3">
+            <h3>Id/Barcode</h3>
+            <input
+              type="text"
+              class="form-control"
+              id="Barcode"
+              formControlName="Id"
+              placeholder="Barcode"
+              minlength="2"
+            />
+          </div>
+          <div class="mb-3">
+            <h3>Emri</h3>
+            <input
+              type="text"
+              class="form-control"
+              id="Emri"
+              formControlName="Emri"
+              placeholder="Emri"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <h3>Sasia</h3>
+            <input
+              type="text"
+              class="form-control"
+              id="Sasia"
+              formControlName="Sasia"
+              placeholder="Sasia"
+            />
+          </div>
+          <mat-radio-group
+            aria-labelledby="example-radio-group-label"
+            class="example-radio-group"
+            formControlName="lloji"
+          >
+            <mat-radio-button
+              class="example-radio-button"
+              *ngFor="let lloji of llojet"
+              [value]="lloji"
+            >
+              {{ lloji }}
+            </mat-radio-button>
+          </mat-radio-group>
+          <div class="mb-3">
+            <h3>Cmimi</h3>
+            <input
+              type="text"
+              class="form-control"
+              id="Cmimi"
+              formControlName="Cmimi"
+              placeholder="Cmimi"
+              minlength="1"
+            />
+          </div>
+          <div *ngIf="!form.valid" class="error">
+            <p>Ju lutem plotesoni fushat e kerkuara!</p>
+          </div>
+          <hr />
+          <button
+            type="button"
+            class="btn btn-primary"
+            href="#"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            (click)="goToAdd()"
+          >
+            Shto Produktin
+          </button>
+          <hr />
+          <button
+            type="button"
+            href="#"
+            (click)="kthehu()"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+          >
+            Kthehu
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

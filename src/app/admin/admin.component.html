@@ -1,0 +1,55 @@
+<header class="masthead">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-center">
+        <h1 class="fw-light">
+          <button
+            mat-raised-button
+            color="danger"
+            class="btn btn-primary btn-lg btn-block"
+            routerLink="/admin-produktet"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+          >
+            Produktet
+          </button>
+        </h1>
+        <h1 class="fw-light">
+          <button
+            mat-raised-button
+            color="danger"
+            class="btn btn-primary btn-lg btn-block"
+            routerLink="/admin-dashboard"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+          >
+            Dashboard
+          </button>
+        </h1>
+        <h1 class="fw-light">
+          <button
+            mat-raised-button
+            color="danger"
+            class="btn btn-primary btn-lg btn-block"
+            routerLink="/admin-punonjes"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+          >
+            Punonjesit
+          </button>
+        </h1>
+
+        <h1 class="fw-light">
+          <button
+            mat-raised-button
+            color="danger"
+            class="btn btn-danger btn-lg btn-block"
+            (click)="logOut()"
+          >
+            LogOut
+          </button>
+        </h1>
+      </div>
+    </div>
+  </div>
+</header>

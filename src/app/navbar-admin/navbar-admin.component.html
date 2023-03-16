@@ -1,0 +1,70 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Program Menaxhimi!</a>
+  <button
+    *ngIf="auth.isAdmin"
+    class="navbar-toggler collapsed"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbar"
+    aria-controls="navbar"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse collapse" id="navbar">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"></li>
+
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="dropdown01"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          >ADMIN</a
+        >
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a
+            class="dropdown-item"
+            href="#"
+            routerLink="/admin-produktet"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Produktet!</a
+          >
+
+          <a
+            class="dropdown-item"
+            href="#"
+            routerLink="/admin-dashboard"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Dashboard!</a
+          >
+          <a
+            class="dropdown-item"
+            href="#"
+            routerLink="/admin-punonjes"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Punonjesit!</a
+          >
+
+          <a
+            class="dropdown-item"
+            href="#"
+            routerLink="/first-page"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            (click)="onLogout()"
+            >Logout!</a
+          >
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
