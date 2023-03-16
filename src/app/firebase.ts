@@ -7,13 +7,14 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDGNTev2RxaER6RqpkQCl4F0ZfHr-9tFSw",
-  authDomain: "projektifinal-ecdb2.firebaseapp.com",
-  projectId: "projektifinal-ecdb2",
-  storageBucket: "projektifinal-ecdb2.appspot.com",
-  messagingSenderId: "516185810145",
-  appId: "1:516185810145:web:b3024edad2675e193ec3a0",
-  measurementId: "G-XYNQBCQ50Q"
+  apiKey: "AIzaSyCCpLgIF1qGw6rl-1GldkGHqxCen4upIFw",
+  authDomain: "lihgt-smart.firebaseapp.com",
+  databaseURL: "https://lihgt-smart-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "lihgt-smart",
+  storageBucket: "lihgt-smart.appspot.com",
+  messagingSenderId: "548082392096",
+  appId: "1:548082392096:web:cf8d55163942d808e7b045",
+  measurementId: "G-GZ1YK3G994"
 };
 
 // Initialize Firebase
