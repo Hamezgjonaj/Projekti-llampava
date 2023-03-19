@@ -15,7 +15,7 @@ export class FormComponent implements OnInit {
   addProduct: boolean = false;
   editProduct: boolean = false;
   llojiINdryshimit = false;
-  llojet = ['Llampa', 'Ambazhura Klasik', 'Sisteme Sigurie', 'tjera'];
+  llojet = ['Llampa', 'Ambazhura', 'KameraCCTV', 'tjera'];
 
   constructor(
     private router: Router,

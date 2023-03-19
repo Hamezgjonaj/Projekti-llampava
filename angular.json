@@ -100,6 +100,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Projekti-llampava:build:production",
+            "firebaseProject": "lihgt-smart",
+            "firebaseHostingSite": "lihgt-smart"
+          }
         }
       }
     }

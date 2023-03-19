@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "lihgt-smart"
+  },
+  "targets": {
+    "lihgt-smart": {
+      "hosting": {
+        "Projekti-llampava": [
+          "lihgt-smart"
+        ]
+      }
+    }
   }
 }

@@ -37,8 +37,8 @@ export class EmployeerComponent implements OnInit {
   ngOnInit(): void {
     this.firebase.getData().subscribe((data: any) => {
       let Llampa: any = [];
-      let SistemeSigurie: any = [];
-      let AmbazhuraKlasik: any = [];
+      let KameraCCTV: any = [];
+      let Ambazhura: any = [];
       let tjera: any = [];
       data.map((values: any) => {
         if (values.lloji === 'Llampa') {
@@ -47,17 +47,17 @@ export class EmployeerComponent implements OnInit {
         if (values.lloji === 'tjera') {
           tjera.push(values);
         }
-        if (values.lloji === 'Sisteme Sigurie') {
-          SistemeSigurie.push(values);
+        if (values.lloji === 'KameraCCTV') {
+          KameraCCTV.push(values);
         }
-        if (values.lloji === 'Ambazhura Klasik') {
-          AmbazhuraKlasik.push(values);
+        if (values.lloji === 'Ambazhura') {
+          Ambazhura.push(values);
         }
       });
       this.item = {
         Llampa: Llampa,
-        SistemeSigurie: SistemeSigurie,
-        AmbazhuraKlasik: AmbazhuraKlasik,
+        KameraCCTV: KameraCCTV,
+        Ambazhura: Ambazhura,
         tjera: tjera,
       };
     });
