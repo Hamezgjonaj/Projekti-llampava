@@ -32,7 +32,7 @@ export class LoginComponent {
     private router: Router,
     private firebase: FirebaseService,
     private authService: AuthService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
@@ -42,11 +42,19 @@ export class LoginComponent {
     this.firebase.getPunonjes().subscribe((punonjes: any) => {
       this.punonjesit = punonjes;
     });
+
   }
+
   onSubmit() {
+    // console.log(this.authService.isLoggedIn);
+    // console.log(this.authService.isAdmin);
+    // console.log(this.loginForm.value.username);
+    // console.log(this.loginForm.value.password);
+    // console.log(this.nukEkziston);
+console.log(this.loginForm);
     if (this.loginForm.valid) {
       this.punonjesit.map((punonjesi: any) => {
-        console.log(punonjesi);
+        // console.log(punonjesi);
         if (
           punonjesi.username === this.loginForm.value.username &&
           punonjesi.password === this.loginForm.value.password
@@ -68,5 +76,7 @@ export class LoginComponent {
     } else {
       alert('plotsoni kredencjalet');
     }
+
   }
+
 }
