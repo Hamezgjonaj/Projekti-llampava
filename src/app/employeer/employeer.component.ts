@@ -16,15 +16,15 @@ export class EmployeerComponent implements OnInit {
   updatedItems: any = [];
   displayedColumnscosttable: string[] = ['item', 'cost'];
   transactions: any[] = [];
-  todayDate : Date = new Date();
+  todayDate: Date = new Date();
 
-  dateVal  =new Date();
+  dateVal = new Date();
 
   getTotalCost() {
     return this.transactions
       .map((t) => t.cost)
       .reduce((acc, value) => parseInt(acc) + parseInt(value), 0);
-      
+
 
   }
 
@@ -32,32 +32,32 @@ export class EmployeerComponent implements OnInit {
     private firebase: FirebaseService,
     private route: Router,
     private auth: AuthService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.firebase.getData().subscribe((data: any) => {
-      let kafe: any = [];
-      let freskuese: any = [];
-      let alkol: any = [];
+      let Llampa: any = [];
+      let SistemeSigurie: any = [];
+      let AmbazhuraKlasik: any = [];
       let tjera: any = [];
       data.map((values: any) => {
-        if (values.lloji === 'kafe') {
-          kafe.push(values);
+        if (values.lloji === 'Llampa') {
+          Llampa.push(values);
         }
         if (values.lloji === 'tjera') {
           tjera.push(values);
         }
-        if (values.lloji === 'freskuese') {
-          freskuese.push(values);
+        if (values.lloji === 'Sisteme Sigurie') {
+          SistemeSigurie.push(values);
         }
-        if (values.lloji === 'alkolike') {
-          alkol.push(values);
+        if (values.lloji === 'Ambazhura Klasik') {
+          AmbazhuraKlasik.push(values);
         }
       });
       this.item = {
-        kafe: kafe,
-        freskuese: freskuese,
-        alkol: alkol,
+        Llampa: Llampa,
+        SistemeSigurie: SistemeSigurie,
+        AmbazhuraKlasik: AmbazhuraKlasik,
         tjera: tjera,
       };
     });

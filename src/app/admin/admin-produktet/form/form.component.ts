@@ -15,13 +15,13 @@ export class FormComponent implements OnInit {
   addProduct: boolean = false;
   editProduct: boolean = false;
   llojiINdryshimit = false;
-  llojet = ['kafe', 'alkolike', 'freskuese', 'tjera'];
+  llojet = ['Llampa', 'Ambazhura Klasik', 'Sisteme Sigurie', 'tjera'];
 
   constructor(
     private router: Router,
     private formService: FormService,
     private firebase: FirebaseService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     let id: any = '';
